@@ -9,5 +9,12 @@
 
 # All testings stuff
 test*
-# the IDE files
-**/.idea
+# cmake directory
+**/cmake-build-debug/
+/CMakeLists.txt
+
+*.xml
+*.iml
+# Other files
+main*
+testing*
