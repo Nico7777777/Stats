@@ -1,0 +1,8 @@
+//
+// Created by nick on 2/8/24.
+//
+
+#ifndef STATISTNICK_LINEARALGEBRA_H
+#define STATISTNICK_LINEARALGEBRA_H
+
+#endif //STATISTNICK_LINEARALGEBRA_H
