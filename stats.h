@@ -16,11 +16,11 @@
 
 //Mean
 //1. for reals
-LD mean(const LD* v, ULL n, bool unbiased=false);
+LD mean(const LD* v, ULL n, bool unbiased=true); /// true -> implicit sample; for false -> population
 //2. for positive integers
-LD mean(const ULL* v, ULL n, bool unbiased=false);
+LD mean(const ULL* v, ULL n, bool unbiased=true);
 //3. for integers(positive/negative)
-LD mean(const LL* v, ULL n, bool unbiased=false);
+LD mean(const LL* v, ULL n, bool unbiased=true);
 
 
 //Median
@@ -34,19 +34,19 @@ LD median(const ULL* v, ULL n);
 
 //Standard Deviation
 //1. for reals
-LD standard_deviation(const LD* v, ULL n, bool unbiased=false);
+LD standard_deviation(const LD* v, ULL n, bool unbiased=true);
 //3. for integers(positive/negative)
-LD standard_deviation(const LL* v, ULL n, bool unbiased=false);
+LD standard_deviation(const LL* v, ULL n, bool unbiased=true);
 //2. for positive integers
-LD standard_deviation(const ULL* v, ULL n, bool unbiased=false);
+LD standard_deviation(const ULL* v, ULL n, bool unbiased=true);
 
 //Variance
 //1. for reals
-LD variance(const LD* v, ULL n, bool unbiased=false);
+LD variance(const LD* v, ULL n, bool unbiased=true);
 //3. for integers(positive/negative)
-LD variance(const LL* v, ULL n, bool unbiased=false);
+LD variance(const LL* v, ULL n, bool unbiased=true);
 //2. for positive integers
-LD variance(const ULL* v, ULL n, bool unbiased=false);
+LD variance(const ULL* v, ULL n, bool unbiased=true);
 
 //Mode
 //1. for reals

@@ -11,12 +11,12 @@ LD sigmoid(LD x) {
     return 1 / (1 + std::exp(-x));
 }
 
-LD tanh(ULL x) {
-    return 2 / (1 + expl(-2*x)) - 1;
-};
-LD tanh(LD x) {
-    return 2 / (1 + expl(-2*x)) - 1;
-}
+//LD tanh(ULL x) {
+//    return 2 / (1 + expl(-2*x)) - 1;
+//};
+//LD tanh(LD x) {
+//    return 2 / (1 + expl(-2*x)) - 1;
+//}
 
 LD ReLU(ULL x) {
     return x > 0 ? x : 0;

@@ -6,6 +6,14 @@
 #include <cmath>
 #include "stats.h"
 
+//class MemoryAllocationError : public std::exception {
+//private:
+//    constexpr static const char message[] = "Memory Allocation Error";
+//public:
+//    static char * what() {
+//        return const_cast<char *>(message);
+//    }
+//};
 int compare(const void *a, const void *b) {
     return (*(LD*)a > *(LD*)b) - (*(LD*)a < *(LD*)b);
 }
@@ -15,7 +23,7 @@ LD mean(const LD* v, const ULL n, bool unbiased){
     LD m = 0;
     for(auto i = 0; i < n; ++i)
         m += v[i];
-    m /= ((!unbiased) ? (LD)n : (LD)(n-1));
+    m /= (LD)n;
     return m;
 }
 //2. for positive integers
@@ -23,7 +31,7 @@ LD mean(const ULL* v, const ULL n, bool unbiased) {
     LD m = 0;
     for(auto i = 0; i < n; ++i)
         m += v[i];
-    m /= ((!unbiased) ? (LD)n : (LD)(n-1));
+    m /= (LD)n;
     return m;
 }
 //3. for integers positive/negative
@@ -31,7 +39,7 @@ LD mean(const LL* v, const ULL n, bool unbiased) {
     LD m = 0;
     for(auto i = 0; i < n; ++i)
         m += v[i];
-    m /= ((!unbiased) ? (LD)n : (LD)(n-1));
+    m /= (LD)n;
     return m;
 }
 
@@ -90,7 +98,7 @@ LD standard_deviation(const LD* v, ULL n, bool unbiased) {
     LD _mean = mean(v, n);
     for(auto i = 0; i < n; ++i)
         sigma += (v[i] - _mean) * (v[i] - _mean);
-    LD sd = ((!unbiased) ? sqrtl((LD)sigma / n) : sqrtl((LD)sigma / (n - 1)));
+    LD sd = ((!unbiased) ? sqrtl((LD)sigma / (LD)n) : sqrtl((LD)sigma / (LD)(n - 1)));
     return sd;
 }
 //2. for integers(positive/negative)

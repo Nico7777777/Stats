@@ -1,7 +1,7 @@
 //
 // Created by nick on 12/15/23.
 //
-
+#include <bitset>
 #include "BigNumbers.h"
 
 // Allocation

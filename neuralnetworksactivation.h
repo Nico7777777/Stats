@@ -12,8 +12,8 @@ LD sigmoid(ULL x);
 LD sigmoid(LD x);
 
 /// Tangenta hiperbolica
-LD tanh(ULL x);
-LD tanh(LD x);
+// LD tanh(ULL x); avem deja in cmath
+// LD tanh(LD x);
 
 /// ReLU
 LD ReLU(ULL x);

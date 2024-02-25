@@ -9,6 +9,7 @@
  * Mean Value, MAE(Mean Absolute Error), MSE(Mean Squared Error)
  * RMSE(Root Mean Squared Error), Accuracy(perfectly matched)
  */
+
 LD residual_sum_of_squares(const LD* real_y, const LD* pred_y, int n) {
     LD rss = 0, _mean = 100;
     for(auto i = 0; i < n; ++i)
@@ -20,7 +21,7 @@ LD total_sum_of_squares(const LD* real_y, const LD* pred_y, int n) {
     return tss;
 }
 
-LD mean_absolute_error(const LD* real_y, const LD* pred_y, int n) {
+LD MAE(const LD* real_y, const LD* pred_y, int n) {
     LD o = 0;
     for(auto i = 0; i < n; ++i)
         o += ((real_y[i] > pred_y[i]) ? real_y[i] - pred_y[i] : pred_y[i] - real_y[i]);
@@ -28,13 +29,13 @@ LD mean_absolute_error(const LD* real_y, const LD* pred_y, int n) {
     return o;
 }
 
-LD mean_squared_error(const LD* real_y, const LD* pred_y, int n) {
+LD MSE(const LD* real_y, const LD* pred_y, int n) {
     LD mse = residual_sum_of_squares(real_y, pred_y, n) / n;
     return mse;
 }
 
-LD root_mean_squared_error(const LD* real_y, const LD* pred_y, int n) {
-    LD rmse = mean_squared_error(real_y, pred_y, n);
+LD RMSE(const LD* real_y, const LD* pred_y, int n) {
+    LD rmse = MSE(real_y, pred_y, n);
     rmse = sqrtl(rmse);
     return rmse;
 }
@@ -48,3 +49,5 @@ LD r_squared(const LD* real_y, const LD* pred_y, int n) {
 
 
 LD euclidean_distance();
+
+
